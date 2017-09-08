@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>Flickr API Photo Search</title>
+        <script src="index.js"></script>
+         <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <div class="simplePhotoModal" id="simplePhotoModal">
+            <div class="simplePhotoContainer" id="simplePhotoContainer"></div>
+            <button class="flat-button close-button" id="closeBtn" onClick="closePhotoModal();"><p>Close</p></button>
+        </div>
+        <div class="simpleGalleryModal" id="simpleGalleryModal">
+            <div class="simpleGalleryContainer" id="simpleGalleryContainer"></div>
+            <button class="flat-button close-button" id="closeBtn" onClick="closeGalleryModal();"><p>Close</p></button>
+        </div>
+        <div class="searchFieldContainer">
+            <button class="flat-button" id="submitbutton" onclick="setUrlAndSearch();"><p>Search</p></button>
+            <input class="searchfield" id="searchfield"  placeholder="Photos, People, or Groups"></input>
+        </div>
+        <div class="centeredContentContainer">
+            <p class="placeholderParagraph" id="placeholderParagraph">What are you looking for?</p>
+            <div class="loader" id="loader"></div>
+            <div class="photoContainer" id="photoContainer"></div>
+            <button disabled class="flat-button gallery-button" id="galleryBtn" onclick="createGallery();"><p>View Gallery</p></button>
+        </div>
+    </body>
+</html>

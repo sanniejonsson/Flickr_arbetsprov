@@ -1,0 +1,300 @@
+body {
+    margin: 0px;
+    font-family: Helvetica;
+    background-color: #F3F5F6;
+}
+
+
+/*MODAL*/
+.simplePhotoModal {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999999;
+    background-color: rgba(21,21,23,.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.simplePhotoContainer {
+    widows: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.simplePhotoContainer img {
+    width: 100%;
+}
+
+.simpleGalleryModal {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999999;
+    background-color: rgba(21,21,23,.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.simpleGalleryContainer {
+    widows: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.simpleGalleryContainer img {
+    height: 15%;
+    margin: 5px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+
+/*BUTTONS*/
+.flat-button {
+    color: #FFFFFF;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 15px 0px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #006dac;
+    cursor: pointer;
+}
+
+.flat-button:focus {
+    outline:none;
+}
+
+.flat-button:active {
+    background-color: #005fac;
+}
+
+.close-button {
+    color: #FFFFFF;
+    background-color: #ff0000;
+}
+
+.close-button:active {
+    background-color: #cc0000;
+}
+
+.gallery-button:active {
+    background-color: #009900;
+ }
+
+.gallery-button{
+    position: absolute;
+    visibility: hidden;
+    background-color: #33cc33;
+}
+
+.visible-gallery-button {
+    visibility: visible;
+    position: relative;
+    background-color: grey;
+}
+
+.visible-gallery-button:active {
+    background-color: grey;
+}
+
+
+/*SEARCHFIELD*/
+.searchFieldContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    background-color: rgba(21,21,23,.95);
+}
+
+.searchFieldContainer input {
+    width: 50%;
+    height: 40px;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    margin: 10px 0px 10px 10px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: lightgrey;
+}
+
+.searchFieldContainer input:focus {
+    outline: none;
+    background-color: #FFFFFF;
+}
+
+
+/*CENTERED CONTAINER*/
+.centeredContentContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+
+/*PLACEHOLDER PARAGRAPH AND LOADER*/
+.placeholderParagraph {
+    margin-top: 50px;
+    color: #cacccc;
+    font-style: italic;
+    text-align: center;
+}
+
+.hiddenPlaceholderParagraph {
+    visibility: hidden;
+    position: absolute;
+}
+
+.loader {
+    margin-top: 50px;
+    border: 5px solid lightgrey;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    visibility: hidden;
+    position: absolute;
+}
+
+.visibleLoader {
+    visibility: visible;
+    position: relative;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*PHOTOCONTAINER AND PHOTO*/
+.photoContainer {
+    width: 75%;
+    padding-top: 20px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.photo {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color:#FFFFFF;
+    border-radius: 4px;
+}
+
+.photo:hover{
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    transform: scale(1.025);
+    -ms-transform: scale(1.025); /* IE 9 */
+    -webkit-transform: scale(1.025); /* Safari and Chrome */
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px 4px lightgrey;
+}
+
+.photo img{
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 100px;
+    padding: 10px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.photo hr {
+    border-top: 1px solid #eeeeee;;
+    margin-bottom: -10px;
+}
+
+.photoText {
+    font-size: 11px;
+    font-style: italic;
+    color: grey;
+    padding: 10px 0px 0px 10px;
+    margin-bottom: 4px;
+}
+
+
+/*CHECKBOX FOR PHOTO*/
+.checkboxContainer {
+    padding: 0px 0px 10px 10px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+    float: left;
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 40px;
+	height: 19px;
+	background: lightgrey;
+	display: block;
+	border-radius: 4px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 2px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #3498db;
+}
+
+input:checked + label:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 30px;
+}
