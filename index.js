@@ -210,9 +210,7 @@ addPhotoEvents = (img) => {
 activateChecked = () => {
     galleryPhotos.forEach((photo) => {
         let checkbox = document.getElementById(photo.id);
-        console.log(checkbox);
         if(checkbox !== undefined && checkbox !== null) {
-            console.log('asdf');
             checkbox.checked = true;
         }
     });
